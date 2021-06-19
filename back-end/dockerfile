@@ -1,0 +1,23 @@
+# FROM ubuntu
+#
+# # RUN apt-get update -y
+# RUN apt update -y
+# RUN apt install openjdk-11-jdk -y
+# RUN apt-get install java-package -y
+# RUN apt-get install maven -y
+#
+# # RUN apt install openjdk-11-jdk -y
+# # RUN apt-get install maven -y
+#
+# WORKDIR /app
+#
+# COPY target/project-aero-0.0.1-SNAPSHOT.jar /app/spring-app.jar
+#
+# ENTRYPOINT ["java", "-jar", "spring-app.jar"]
+#
+
+
+FROM openjdk:11
+EXPOSE 8080
+ADD caca-tesouro-0.0.1-SNAPSHOT.jar spring-boot-docker.jar
+ENTRYPOINT ["java","-jar","/spring-boot-docker.jar"]
