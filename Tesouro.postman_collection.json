@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "3afe48df-a157-47b4-bc4f-c6be28bf96da",
+		"name": "Tesouro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bandeira Piratasssssssssss Pokemon\",\r\n    \"creatorName\": \"Gabriel Cardoso\",\r\n    \"tsStart\": \"2021-06-18T19:38:04.0297531\",\r\n    \"tsEnd\": \"2021-06-30T21:54:04.0297531\",\r\n    \"tips\": [\r\n        {\r\n            \"description\":\"Teste 1\",\r\n            \"code\":\"1\"\r\n        },\r\n        {\r\n            \"description\":\"Teste 2\",\r\n            \"code\":\"2\"\r\n        },\r\n        {\r\n            \"description\":\"Teste 3\",\r\n            \"code\":\"3\"\r\n        },\r\n        {\r\n            \"description\":\"Teste 4\",\r\n            \"code\":\"4\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/event/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"event",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Join Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Gabriel Cardoso\",\r\n    \"email\": \"gcm.ataide@gmailasdsssasd.com\",\r\n    \"eventCode\": \"123C196E\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/event/join",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"event",
+						"join"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Event By Code",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bandeira Pirata Pokemon\",\r\n    \"creatorName\": \"Gabriel Cardoso\",\r\n    \"tStart\": \"22:22\",\r\n    \"tsStart\": \"2021-06-20T21:54:04.0297531\",\r\n    \"tsEnd\": \"2021-06-30T21:54:04.0297531\",\r\n    \"tips\": [\r\n        {\r\n            \"description\":\"Teste 1\",\r\n            \"code\":\"644374F81\"\r\n        },\r\n        {\r\n            \"description\":\"Teste 2\",\r\n            \"code\":\"644374F81\"\r\n        },\r\n        {\r\n            \"description\":\"Teste 3\",\r\n            \"code\":\"644374F81\"\r\n        },\r\n        {\r\n            \"description\":\"Teste 4\",\r\n            \"code\":\"644374F81\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/event/findByCode/:code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"event",
+						"findByCode",
+						":code"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "509A708D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Win Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventCode\":\"123C196E\",\r\n    \"userId\":\"15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/event/win",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"event",
+						"win"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ranking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ranking/123C196E",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ranking",
+						"123C196E"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
